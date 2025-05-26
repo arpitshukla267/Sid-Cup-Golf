@@ -1,0 +1,320 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family: 'montserrat';
+    color : #fff;
+}
+
+html,body{
+    width : 100%;
+    height : 100%;
+
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+#nav {
+    height : 145px;
+    width : 100%;
+    /*background-color: red;*/
+    display : flex;
+    align-items: center;
+    padding: 0 150px;
+    gap : 50px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 99;
+}
+#nav a{
+    text-transform: uppercase;
+    font-weight: 500;
+    z-index: 100;
+    text-decoration: none;
+    font-size: 17px;
+    z-index: 100;
+}
+
+#nav a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+#nav img{
+    height: 75px;
+}
+
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+}
+
+#cursor-blur{
+    height: 300px;
+    width: 300px;
+    background-color: #5e7c0b;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(150px);
+    z-index: 9;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+    letter-spacing: 5px;
+}
+
+#page1 h1::before{
+    content : "EAT. DRINK. PLAY";
+    color: #000;
+    position: absolute;
+    top: -6px;
+    left: -6.5px;
+    -webkit-text-stroke: 0.5px #95C11E;
+    z-index: -1;
+}
+
+#page1 h2{
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    gap: 100px;    
+}
+
+#page1 h3{
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+}
+
+#page2 {
+    height: 150vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller{
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    z-index: 20;
+}
+
+
+#scroller h4 {
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    margin-right: 20px;
+    word-spacing: 5px;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+    transition: all linear 0.5s;
+}
+
+#scroller h4:hover{
+    color: #95C11E !important;
+    -webkit-text-stroke: 0 !important;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+       transform:  translateX(0);
+    }
+    to{
+       transform:  translateX(-100%);
+    }
+}
+
+#about-us{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    padding: 0 50px;
+    align-items: center;
+    justify-content: space-around;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 20%;
+    margin-top: 200px;
+    font-family: 'anton-regular';
+
+}
+
+#abut-us-in{
+    width: 40%;
+    text-align: center;
+}
+#about-us-in h3{
+    font-size: 60px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#about-us-in p{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#cards-container{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    gap: 80px;
+}
+
+.cards{
+    height: 80%;
+    width: 25%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 1s;
+    z-index: 20;
+}
+
+#card1{
+    background-image: url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1');
+}
+
+#card2{
+    background-image: url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1');
+}
+
+#card3{
+    background-image: url('https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1');
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    border-radius: 20px;
+    padding-top: 30%;
+    opacity: 0;
+    transition: all ease 1s;
+}
+
+.overlay h4{
+    color: black;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.overlay p{
+    color: black;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cards:hover .overlay{
+    opacity: 1;
+}
+
+.cards:hover{
+    transform: rotate3d(-1,1,0,15deg);
+}
+
+#end{
+    height:150px;
+    width: 90%;
+    background-color: #95C11E;
+    margin-left: 5%;
+    border-radius: 15px;
+    opacity: 0.8;
+    position: relative;
+    z-index: 20;
+    transition: all ease 1s;
+}
+
+#end p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 26%;
+    z-index: 20;
+    transition: all ease 1s;
+}
+
+#end p:hover { 
+    color:#000;
+}
+
+#developer p {
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 20px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    z-index: 20;
+}
+
+#developer:hover{
+    background-color: #95C11E;
+}
